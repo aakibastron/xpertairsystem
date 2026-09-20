@@ -40,12 +40,17 @@
     padding: 48px 22px 70px;
   }
   .logo{
-    width: 78px; height: 78px;
+    width: 96px; height: 96px;
     margin: 0 auto 22px;
-    background: var(--night);
     border-radius: 22px;
     display:flex; align-items:center; justify-content:center;
-    box-shadow: 0 14px 30px rgba(13,27,42,0.22);
+    overflow:hidden;
+  }
+  .logo img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
   }
   .brand-title{
     text-align:center;
@@ -97,6 +102,8 @@
   }
   .link-icon svg{ width:20px; height:20px; }
   .brand-icon img{ display:block; width:24px; height:24px; }
+  .brand-icon.ic-maps img{ filter: invert(39%) sepia(98%) saturate(1457%) hue-rotate(194deg) brightness(91%) contrast(94%); }
+  .brand-icon.ic-google img{ filter: invert(48%) sepia(97%) saturate(1854%) hue-rotate(202deg) brightness(95%) contrast(92%); }
   .link-arrow{ margin-left:auto; opacity:0.35; }
   .link-arrow svg{ width:16px; height:16px; }
 
@@ -105,12 +112,6 @@
   .ic-wa{ background:#E7FBF7; color:#0FBFA5; }
   .ic-serv{ background:#FFF0E6; color:var(--heat); }
   .ic-contact{ background:#F0EEFF; color:#6C5CE7; }
-  .link-btn.primary{
-    background: var(--night);
-    color: var(--paper);
-    border-color: var(--night);
-  }
-  .link-btn.primary .link-arrow{ opacity:0.5; color:var(--cool); }
 
   /* ---------- Services section ---------- */
   #services{
@@ -189,9 +190,7 @@
 <div class="page">
 
   <div class="logo">
-    <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2" stroke="#5CE1D6" stroke-width="1.9" stroke-linecap="round"/>
-    </svg>
+    <img src="logo.png" alt="Xpert Air Conditioner logo" width="96" height="96">
   </div>
 
   <h1 class="brand-title">Xpert Air Conditioner</h1>
@@ -199,16 +198,16 @@
   <p class="brand-loc">📍 Ahmedabad, Gujarat</p>
 
   <div class="links">
-    <a class="link-btn primary" href="https://maps.app.goo.gl/SDTrXVSzTZzTpWT27" target="_blank" rel="noopener">
-      <span class="link-icon brand-icon" style="background:rgba(92,225,214,0.14);">
+    <a class="link-btn" href="https://maps.app.goo.gl/SDTrXVSzTZzTpWT27" target="_blank" rel="noopener">
+      <span class="link-icon brand-icon ic-maps">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/googlemaps.svg" alt="Google Maps" width="24" height="24">
       </span>
       Find Us on Google Maps
       <span class="link-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </a>
 
-    <a class="link-btn primary" href="https://g.page/r/CfQw8FFXYgaJEAE/review" target="_blank" rel="noopener">
-      <span class="link-icon brand-icon" style="background:rgba(92,225,214,0.14);">
+    <a class="link-btn" href="https://g.page/r/CfQw8FFXYgaJEAE/review" target="_blank" rel="noopener">
+      <span class="link-icon brand-icon ic-google">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/google.svg" alt="Google" width="24" height="24">
       </span>
       Write review on google
